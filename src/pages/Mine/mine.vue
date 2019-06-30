@@ -1,5 +1,6 @@
 <template>
 	<div id="searchWrap">
+		<searchcuxiao></searchcuxiao>
 		<searchlunbo></searchlunbo>
 		<searchmitxt></searchmitxt>
 		<searchrongliang></searchrongliang>
@@ -7,9 +8,12 @@
 		<searchpinglun></searchpinglun>
 		<searchlazyload></searchlazyload>
 		<searchtuijian></searchtuijian>
+		<searchDwbutton></searchDwbutton>
 	</div>
 </template>
 <script>
+	import searchcuxiao from'../../components/searchcuxiao'
+	import searchDwbutton from'../../components/searchDwbutton'
 	import searchlunbo from'../../components/searchLunbo'
 	import searchmitxt from'../../components/searchMitxt'
 	import searchrongliang from'../../components/searchrongliang'
@@ -19,6 +23,8 @@
 	import searchtuijian from'../../components/searchtuijian'
 	export default{		
 		components:{
+			searchcuxiao,
+			searchDwbutton,
 			searchlunbo,
 			searchmitxt,
 			searchrongliang,
@@ -32,5 +38,6 @@
 <style lang='less'>
 	#searchWrap{
 		margin-bottom: 1.2rem;
+		position: relative;
 	}
 </style>
