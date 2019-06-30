@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>毕业季</h2>
+		<h2>电视</h2>
 	</div>
 </template>
 

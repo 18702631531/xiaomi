@@ -3,7 +3,9 @@
 		<span>{{txt}}</span>
 		<slot name="HleftImg"  class="HleftImg" ></slot>				
 		<slot name="search" class="headerSearch"></slot>
-		<slot name="HrightImg" class="HrightImg" ></slot>				
+		<slot name="HrightImg" class="HrightImg" ></slot>	
+		<slot name="homeNav" class="homenav" ></slot>	
+		
 	</div>
 </template>
 
@@ -22,7 +24,10 @@
 		background: #eee;
 		color: #333;
 		text-align: center;
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 88;
 		img{
 			width: 30/64rem;
 		}
