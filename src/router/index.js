@@ -4,6 +4,7 @@ import Home from '@/pages/Home/home'
 import Sort from '@/pages/Sort/sort'
 import Car from '@/pages/Car/car'
 import Mine from '@/pages/Mine/mine'
+import Search from '@/pages/Search/Search'
 
 import homeBiyeJi from '@/components/homeBiyeJi'
 import homeCompute from '@/components/homeCompute'
@@ -35,6 +36,7 @@ export default new Router({
     ]},
     {path:'/Sort',name:'Sort',component:Sort },
     {path:'/Car',name:'Car',component:Car },
-    {path:'/Mine',name:'Mine',component:Mine }
+    {path:'/Mine',name:'Mine',component:Mine },
+    {path:'/Search',name:'Search',component:Search}
   ]
 })
