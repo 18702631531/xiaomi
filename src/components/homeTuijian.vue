@@ -14,7 +14,7 @@
 		
 		<ul class="homeFenlei">
 			<li v-for="(item,index) in fenleiArr" :key="index">
-				<a href="#"><img :src="item" alt="" /></a>
+				<router-link to="/Search"><img :src="item" alt="" /></router-link >
 			</li>			
 		</ul>
 		<homeItem :reception="homeArr">		</homeItem>	

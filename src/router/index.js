@@ -4,7 +4,7 @@ import Home from '@/pages/Home/home'
 import Sort from '@/pages/Sort/sort'
 import Car from '@/pages/Car/car'
 import Mine from '@/pages/Mine/mine'
-import Search from '@/pages/Search/Search'
+
 
 import homeBiyeJi from '@/components/homeBiyeJi'
 import homeCompute from '@/components/homeCompute'
@@ -14,6 +14,7 @@ import homeShenghuo from '@/components/homeShenghuo'
 import homeTuijian from '@/components/homeTuijian'
 import homeTV from '@/components/homeTV'
 import homeZhineng from '@/components/homeZhineng'
+import Search from '@/components/Search'
 
 Vue.use(Router)
 
@@ -32,11 +33,13 @@ export default new Router({
     		{path:'homeShenghuo',name:'homeShenghuo',component:homeShenghuo},
     		{path:'homeTuijian',name:'homeTuijian',component:homeTuijian},
     		{path:'homeTV',name:'homeTV',component:homeTV},
-    		{path:'homeZhineng',name:'homeZhineng',component:homeZhineng}
+    		{path:'homeZhineng',name:'homeZhineng',component:homeZhineng},
+    		{path:'Search',name:'Search',component:Search}
+    		
     ]},
     {path:'/Sort',name:'Sort',component:Sort },
     {path:'/Car',name:'Car',component:Car },
     {path:'/Mine',name:'Mine',component:Mine },
-    {path:'/Search',name:'Search',component:Search}
+    
   ]
 })
