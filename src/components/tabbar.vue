@@ -48,7 +48,8 @@ export default {
 		justify-content: center;
 		align-items: center;
 		position: fixed;
-		bottom: 0;		
+		bottom: 0;	
+		z-index: 66;
 	}
 	
 </style>

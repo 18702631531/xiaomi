@@ -1,29 +1,48 @@
 <template>
 	<div>
-		<miHeader class="headerWrap">
-			<img slot="HleftImg" class="HleftImg" src="../../assets/images/icon/logo.png" alt="" />
-			<div slot="search" class="headerSearch">
-				<img class="searchImg" src="../../assets/images/icon/search.png" alt="" />
-				<input type="text" name="search" placeholder="搜索商品名称" />
-			</div>
-			<img slot="HrightImg" class="HrightImg" src="../../assets/images/tabbar/tabbar4.png" alt="" />
-		</miHeader>
-		<miBanner>
-			
-		</miBanner>
+	
+		<homeHeader></homeHeader>
+
+		<!--<miBackTop> </miBackTop>-->
 	</div>
 </template>
-<script>	
-	import miHeader from '../../components/miHeader'
-	import miBanner from '../../components/miBanner'
-	export default{		
-		components:{
-			miHeader,
-			miBanner
+<script>
+	import homeHeader from '../../components/homeHeader'
+//	import miBackTop from '../../components/miBackTop'
+	export default {
+
+		components: {
+			homeHeader,
+//			miBackTop
+		},
+		beforeCreate: function() {
+			this.$router.push('/home/homeTuijian')
+		},
+		mounted() {
+			this.getData();
+		},
+		methods: {
+			getData() {
+				this.$axios.get("../../../static/data/homeItemData.json")
+					.then(
+						res => {
+							console.log(res.data.homeItemArr);
+							this.homeArr = res.data.homeItemArr;
+						}).catch(err => {
+						console.log("err", err);
+					})
+			},
+			navShow() {
+				this.isShow = !this.isShow
+			},
+			headerNav(index) {
+				this.currIndex = index;
+			}
 		}
+
 	}
 </script>
 
 <style lang='less'>
-	
+
 </style>
